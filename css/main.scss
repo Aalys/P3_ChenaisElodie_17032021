@@ -1,13 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 @media screen and (max-width: 576px)
 {
     body{
         margin: 0;
-
+        font-family: 'Roboto', sans-serif;
+    }
+    h2{
+        font-weight: 900;
     }
 
     /*  ===========================================
         ================ HEADER ===================
-        ===========================================   */
+        ===========================================   
+        ALL PAGES */
 
     .logo{
         width: 50%;
@@ -16,6 +23,21 @@
         object-fit: contain;
         padding-top: 1em;
       }
+      .header-logo{
+        //   display: flex;
+          margin-bottom: 1.5em;
+          position: relative;
+          &__icone{
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            color: black;
+          }
+        }
+
+    /*  ================================================================================
+        ================================ HOMEPAGE ======================================
+        ================================================================================ */ 
 
     /*  ===========================================
         ============ SECTION  LOCAL ===============
@@ -31,7 +53,7 @@
         .local-map{
             display: flex;
             justify-content: center;
-            padding: 0.7em;
+            padding: 0.7em 0;
             background-color: #e4e4e4;
             border-top: 2px solid rgb(197, 197, 197);
         }
@@ -141,7 +163,7 @@
             border-radius: 2px;
             background-color: #99E2D0;
             color: #16912a;
-            padding: 0.5em;
+            padding: 0.7em;
         }
         &__total{
             padding: 0 1em 1em;
@@ -168,17 +190,19 @@
     }
     /*  ===========================================
         ================ FOOTER ===================
-        ===========================================  */ 
+        ===========================================  
+        ALL PAGES */ 
 
     .footer{
-        background-color: black;
+        background-color: rgb(54, 54, 54);
         color: white;
         padding-bottom: 1em;
+        position: relative;
         &__logo{
             color: white;
             font-family: "Shrikhand", "cursive";
-            padding: 0 2em;
-            font-size: 1.2rem;
+            padding: 1em 2em 0;
+            font-size: 1.2em;
         }
         &__link{
             text-decoration: none;
@@ -186,9 +210,90 @@
         }
         &__listli{
             list-style: none;
+            line-height: 28px;
         }
         &__icone{
             padding: 0 1em 0 0;
         }
     }
+
+    /*  ================================================================================
+        ============================== AUTRES PAGES ====================================
+        ================================================================================ */ 
+
+    .menu-photo
+    {
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+    }
+    .menu h2{
+        font-family: "Shrikhand", "cursive";
+    }
+    .submenu h3{
+        margin: 0;
+    }
+
+    /*  ===========================================
+        ================ MENUS ===================
+        ===========================================  
+        ALL PAGES */ 
+        
+    .menu-container
+    {
+        width: 100%;
+        margin: auto;
+        padding-top: 1em;
+        background-color: #F2F2F2;
+        border-radius: 35px;
+        position: relative;
+        top: -50px;
+    .menu{
+        width: 90%;
+        margin: auto;
+            display: flex;
+            &__title{
+                flex: 1;
+                margin: 0;
+            }
+            // &__btn{
+            //     // padding: 1em 1em 0 1em;
+            // }
+        }
+    }
+    .submenu{
+        width: 90%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1em;
+        margin-top: 2em;
+        &__card {
+            background-color: white;
+            box-shadow: 0 0 10px #0000002e;
+            border-radius: 1em;
+            padding: 0.7em;
+            line-height: 23px;
+        }
+        &__title{
+            font-weight: bold;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        &__desc{
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            position: relative;
+            float: left;
+        }
+        &__price{
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            float: right;
+            padding-right: 0.5em;
+        }
+    }
+
+
 }

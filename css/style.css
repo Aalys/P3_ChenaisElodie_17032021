@@ -290,11 +290,12 @@
       =============== BUTTONS ===================
       ===========================================  
      ALL PAGES */
-  .menu__btn {
+     
+    .menu__btn {
     display: flex;
     margin: auto;
     justify-content: center;
-    padding: 1em;
+    padding: 3em;
   }
 }
 

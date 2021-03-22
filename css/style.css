@@ -190,7 +190,7 @@
     background-color: #363636;
     color: white;
     padding-bottom: 1em;
-    position: relative;
+    margin-top: -50px;
   }
   .footer__logo {
     color: white;
@@ -236,7 +236,7 @@
     margin: auto;
     padding-top: 1em;
     background-color: #F2F2F2;
-    border-radius: 35px;
+    border-radius: 35px 35px 0 0;
     position: relative;
     top: -50px;
   }
@@ -282,6 +282,18 @@
     position: relative;
     float: right;
     padding-right: 0.5em;
+    font-weight: bolder;
+  }
+
+  /*  ===========================================
+      =============== BUTTONS ===================
+      ===========================================  
+     ALL PAGES */
+  .menu__btn {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    padding: 1em;
   }
 }
 

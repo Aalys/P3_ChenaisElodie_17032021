@@ -23,7 +23,7 @@
             <!-- En-tête -->
             <section class="menu">
                     <h2 class="menu__title">La palette du goût</h2>
-                <div class="menu__btn">
+                <div class="menu__btnlike">
                     <i class="menu__like menu__like--off far fa-heart fa-2x"></i>
                     <i class="menu__like menu__like--on fas fa-heart fa-2x"></i>
                 </div>
@@ -32,9 +32,11 @@
             <!-- Menus -->
             <section class="submenu">
                 <h3>Entrées</h3>
-                <div class="submenu__card">
-                    <div class="submenu__title">Fricassée d'escargot</div>
-                    <div class="submenu__desc">Au piment d'Espelette </div>
+                <div class="submenu__card"> 
+                    <div class="submenu__part">
+                        <div class="submenu__title">Fricassée d'escargot</div>
+                        <div class="submenu__desc">Au piment d'Espelette </div>
+                    </div>
                     <div class="submenu__price">25€</div>
                 </div>
                 
@@ -76,19 +78,26 @@
                 <h3>Desserts</h3>
                 <div class="submenu__card">
                     <div class="submenu__title">Paris-Brest</div>
-                    
-                Revisité
-                18€
+                    <div class="submenu__desc">Revisité</div>
+                    <div class="submenu__price">18€</div>
+                </div>
+
+                <div class="submenu__card">
+                    <div class="submenu__title">Macaron au chocolat d'exception </div>
+                    <div class="submenu__desc">Et glace à la vanille de Madagascar</div>
+                    <div class="submenu__price">22€</div>
                 </div>
                 
-                Macaron au chocolat d'exception 
-                Et glace à la vanille de Madagascar
-                22€
-                
-                Mousse au chocolat 
-                Au piment d'Espelette et à la truffe noire
-                23€  
+                <div class="submenu__card">
+                    <div class="submenu__title">Mousse au chocolat</div>
+                    <div class="submenu__desc">Au piment d'Espelette et à la truffe noire</div>
+                    <div class="submenu__price"> 23€</div>
+                </div>
             </section>
+
+            <div class="menu__btn">
+                <button class="btn" type="button">Commander</button>
+            </div>
         </main>
 
          <!-- Footer identiques sur chaque page -->

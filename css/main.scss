@@ -197,7 +197,7 @@
         background-color: rgb(54, 54, 54);
         color: white;
         padding-bottom: 1em;
-        position: relative;
+        margin-top: -50px;
         &__logo{
             color: white;
             font-family: "Shrikhand", "cursive";
@@ -245,7 +245,7 @@
         margin: auto;
         padding-top: 1em;
         background-color: #F2F2F2;
-        border-radius: 35px;
+        border-radius: 35px 35px 0 0;
         position: relative;
         top: -50px;
     .menu{
@@ -256,7 +256,7 @@
                 flex: 1;
                 margin: 0;
             }
-            // &__btn{
+            // &__btnlike{
             //     // padding: 1em 1em 0 1em;
             // }
         }
@@ -292,7 +292,19 @@
             position: relative;
             float: right;
             padding-right: 0.5em;
+            font-weight: bolder;
         }
+    }
+     /*  ===========================================
+         =============== BUTTONS ===================
+         ===========================================  
+        ALL PAGES */ 
+
+    .menu__btn{
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        padding: 1em;
     }
 
 

@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+
 @media screen and (max-width: 576px)
 {
     body{
@@ -236,6 +240,10 @@
     }
     .submenu h3{
         margin: 0;
+        text-transform: uppercase;
+        border-bottom: solid #99E2D0; 
+        width: 2.5em;   
+        padding-bottom: 3px;
     }
 
     /*  ===========================================
@@ -243,7 +251,7 @@
         ===========================================  
         ALL PAGES */ 
         
-    .menu-container
+    .menu-container 
     {
         width: 100%;
         margin: auto;
@@ -268,44 +276,139 @@
     .submenu{
         width: 90%;
         margin: auto;
-        display: flex;
-        flex-direction: column;
         row-gap: 1em;
         margin-top: 2em;
         &__card {
             background-color: white;
             box-shadow: 0 0 10px #0000002e;
             border-radius: 1em;
-            padding: 0.7em;
+            padding: 1em;
+            margin: 1em 0;
             line-height: 23px;
+            cursor: pointer; 
+            overflow: hidden; /* cache ce qui dépasse */
+            display: flex;
+            animation: appear 0.4s;
+            animation-timing-function: cubic-bezier(.42,.63,.83,.67);
+            animation-fill-mode: both;
+            transform: scale(0);
+            max-width: 100%;
         }
         &__title{
             font-weight: bold;
             white-space: nowrap;
             text-overflow: ellipsis;
+            margin: 0;
+        }
+        &__part{
+            flex: 1;
         }
         &__desc{
             white-space: nowrap;
             text-overflow: ellipsis;
-            position: absolute;
+            overflow: hidden;
+            margin: 0; /* empêche la box flex de s'agrandir sur la hauteur quand le prix va à gauche */
         }
         &__price{
             display: flex;
             justify-content: flex-end;
-            padding-right: 0.5em;
+            margin-right: 20px;
+            padding-left: 10px;
+            align-items: flex-end;
             font-weight: bolder;
         }
+        &__confirmation{   /* animation clic choix */
+            width: 3em;
+            margin: -1em -4em -1em 1em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #99e2d0;
+            transform: translateX(10px);  
+            transition-duration: 0.5s;
+        }
+        &__icon{
+            color: #99e2d0;
+        }
+        &__aroundIcon{
+            width: 2em;
+            height: 2em;
+            background-color:white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: rotate(180deg);
+            transition-duration: 0.5s;
+        }
+        &:hover &__confirmation{
+            margin-right: -0.5em;
+        }
+        &:hover &__aroundIcon{
+            transform: rotate(0);
+        }
     }
+    @keyframes appear {  /* changement de taille à l'apparition durant l'animation */
+        0% {
+          transform: scale(0) 
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    /* éléments apparaissent au fur et à mesure */
+    .delay-1{
+        animation-delay: 1s;
+    }
+    .delay-2{
+        animation-delay: 2s;
+    }
+    .delay-3{
+        animation-delay: 3s;
+    }
+    .delay-4{
+        animation-delay: 4s;
+    }
+    .delay-5{
+        animation-delay: 5s;
+    }
+    .delay-6{
+        animation-delay: 6s;
+    }
+    .delay-7{
+        animation-delay: 7s;
+    }
+    .delay-8{
+        animation-delay: 8s;
+    }
+    .delay-9{
+        animation-delay: 9s;
+    }
+    @for $i from 0 to 9 {
+        .delay-#{$i} {
+          animation-delay:  #{$i/10}s;
+        }
+      } 
      /*  ===========================================
          =============== BUTTONS ===================
          ===========================================  
         ALL PAGES */ 
 
+    .btn{
+        color: white;
+        background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+        font-weight: bolder;
+        font-size: 1.1rem;
+        border-radius: 100px;
+        padding: 0.7em 1em;
+        border: none;
+        box-shadow: 2px 7px 9px #0000002e;
+    }
     .menu__btn{
         display: flex;
         margin: auto;
         justify-content: center;
-        padding: 1em;
+        padding: 4em;
     }
 
 

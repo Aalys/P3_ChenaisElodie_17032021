@@ -287,14 +287,11 @@
         &__desc{
             white-space: nowrap;
             text-overflow: ellipsis;
-            position: relative;
-            float: left;
+            position: absolute;
         }
         &__price{
             display: flex;
             justify-content: flex-end;
-            position: relative;
-            float: right;
             padding-right: 0.5em;
             font-weight: bolder;
         }

@@ -9,54 +9,117 @@
     </head>
 
     <body>
-        <!-- Logo du site -->
-        <header>
+         <!-- Logo du site -->
+         <header>
             <div class="header-logo">
                 <a href="index.html"><i class="fas fa-arrow-left header-logo__icone"></i></a>
                 <img src="images/logo/ohmyfood.png" class="logo" alt="logo">
             </div>
         </header>
 
-            Le délice des sens
+          
+        <img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="" class="menu-photo"> 
 
-        Entrées
-        Tartare de thon
-        Assaisonné au yuzu
-        25€
+        <main class="menu-container">
+            <!-- En-tête -->
+            <section class="menu">
+                    <h2 class="menu__title">Le délice des sens</h2>
+                <div class="menu__btnlike">
+                    <i class="menu__like menu__like--off far fa-heart fa-2x"></i>
+                    <i class="menu__like menu__like--on fas fa-heart fa-2x"></i>
+                </div>
+            </section>
 
-        Bouchée de homard croustillant 
-        Et sa farandole de petits légumes
-        35€
-
-        Velouté de cèpes 
-        Aux truffes
-        20€
+            <!-- Menus -->
+            <section class="submenu">
+                <h3>Entrées</h3>
+                <div class="submenu__card"> 
+                    <div class="submenu__part">
+                        <div class="submenu__title">Tartare de thon</div>
+                        <div class="submenu__desc">Assaisonné au yuzu</div>
+                    </div>
+                    <div class="submenu__price">25€</div>
+                </div>
                 
-        Plats
-        Poulet rôti aux herbes de Provence 
-        Et sa crème de truffe
-        40€
+                <div class="submenu__card"> 
+                    <div class="submenu__title">Bouchée de homard croustillant </div>
+                    <div class="submenu__desc">Et sa farandole de petits légumes</div>
+                    <div class="submenu__price">35€</div>
+                </div>
+                
+                <div class="submenu__card">
+                    <div class="submenu__title">Velouté de cèpes </div>
+                    <div class="submenu__desc">Aux truffes</div>
+                    <div class="submenu__price">20€</div>
+                </div>
 
-        Langouste rôtie 
-        Et ses légumes de saison
-        35€
+                <div class="submenu__card">
+                    <div class="submenu__title">Poulet rôti aux herbes de Provence </div>
+                    <div class="submenu__desc">Et sa crème de truffe</div>
+                    <div class="submenu__price">35€</div>
+                </div>
+            </section>
+            
+            <section class="submenu">
+                <h3>Plats</h3>
+                <div class="submenu__card">
+                    <div class="submenu__title">Langouste rôtie </div>
+                    <div class="submenu__desc">Et ses légumes de saison</div>
+                    <div class="submenu__price">40€</div>
+                </div>
 
-        Côte de boeuf Angus 
-        Et sa purée de panais
-        44€
+                <div class="submenu__card">
+                    <div class="submenu__title">Côte de boeuf Angus</div>
+                    <div class="submenu__desc">Et sa purée de panais</div>
+                    <div class="submenu__price">35€</div>
+                </div>
+            </section>
+                    
+            <section class="submenu">
+                <h3>Desserts</h3>
+                <div class="submenu__card">
+                    <div class="submenu__title">Farandole de desserts</div>
+                    <div class="submenu__desc">Du chef</div>
+                    <div class="submenu__price">18€</div>
+                </div>
 
-        Desserts
-        Farandole de desserts
-        Du chef
-        18€
+                <div class="submenu__card">
+                    <div class="submenu__title">Crème brulée </div>
+                    <div class="submenu__desc">Revisitée</div>
+                    <div class="submenu__price">22€</div>
+                </div>
+                
+                <div class="submenu__card">
+                    <div class="submenu__title">Tiramisu </div>
+                    <div class="submenu__desc">À la noisette</div>
+                    <div class="submenu__price"> 23€</div>
+                </div>
+            </section>
 
-        Crème brulée 
-        Revisitée
-        22€
+            <div class="menu__btn">
+                <button class="btn" type="button">Commander</button>
+            </div>
+        </main>
 
-        Tiramisu 
-        À la noisette
-        23€
-
+         <!-- Footer identiques sur chaque page -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__logo">ohmyfood</div>
+                <ul class="footer__list">
+                    <li class="footer__listli">
+                        <a class="footer__link" href="#"><i class="footer__icone fas fa-utensils"></i>Proposer un restaurant</a>
+                    </li>
+                    <li class="footer__listli">
+                        <a class="footer__link" href="#"><i class="footer__icone fas fa-hands-helping"></i>Devenir partenaire</a>
+                    </li>
+                    <li class="footer__listli">
+                        <a class="footer__link" href="#">Mentions légales</a>
+                    </li>
+                    <li class="footer__listli">
+                        <a class="footer__link" href="contact@ohmyfood.com">Contact</a>
+                    </li>
+                </ul>
+              </div>
+        </footer>
     </body>
 </html>

@@ -289,10 +289,8 @@ $color-tertiary: #99E2D0;
             overflow: hidden; /* cache ce qui dépasse */
             display: flex;
             animation: appear 0.4s;
-            animation-timing-function: cubic-bezier(.42,.63,.83,.67);
+            animation-timing-function: cubic-bezier(.32,.42,.77,.7);
             animation-fill-mode: both;
-            transform: scale(0);
-            max-width: 100%;
         }
         &__title{
             font-weight: bold;
@@ -358,31 +356,31 @@ $color-tertiary: #99E2D0;
       }
     /* éléments apparaissent au fur et à mesure */
     .delay-1{
-        animation-delay: 1s;
+        animation-delay: 0.1s;
     }
     .delay-2{
-        animation-delay: 2s;
+        animation-delay: 0.2s;
     }
     .delay-3{
-        animation-delay: 3s;
+        animation-delay: 0.3s;
     }
     .delay-4{
-        animation-delay: 4s;
+        animation-delay: 0.4s;
     }
     .delay-5{
-        animation-delay: 5s;
+        animation-delay: 0.5s;
     }
     .delay-6{
-        animation-delay: 6s;
+        animation-delay: 0.6s;
     }
     .delay-7{
-        animation-delay: 7s;
+        animation-delay: 0.7s;
     }
     .delay-8{
-        animation-delay: 8s;
+        animation-delay: 0.8s;
     }
     .delay-9{
-        animation-delay: 9s;
+        animation-delay: 0.9s;
     }
     @for $i from 0 to 9 {
         .delay-#{$i} {

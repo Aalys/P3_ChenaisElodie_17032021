@@ -274,7 +274,7 @@
     /* cache ce qui dépasse */
     display: flex;
     animation: appear 0.4s;
-    animation-timing-function: cubic-bezier(0.42, 0.63, 0.83, 0.67);
+    animation-timing-function: cubic-bezier(.32,.42,.77,.7);
     animation-fill-mode: both;
     transform: scale(0);
     max-width: 100%;
@@ -345,76 +345,44 @@
     }
   }
   /* éléments apparaissent au fur et à mesure */
-  .delay-1 {
-    animation-delay: 1s;
-  }
-
-  .delay-2 {
-    animation-delay: 2s;
-  }
-
-  .delay-3 {
-    animation-delay: 3s;
-  }
-
-  .delay-4 {
-    animation-delay: 4s;
-  }
-
-  .delay-5 {
-    animation-delay: 5s;
-  }
-
-  .delay-6 {
-    animation-delay: 6s;
-  }
-
-  .delay-7 {
-    animation-delay: 7s;
-  }
-
-  .delay-8 {
-    animation-delay: 8s;
-  }
-
-  .delay-9 {
-    animation-delay: 9s;
-  }
-
+  
   .delay-0 {
     animation-delay: 0s;
   }
-
+  
   .delay-1 {
     animation-delay: 0.1s;
   }
-
+  
   .delay-2 {
     animation-delay: 0.2s;
   }
-
+  
   .delay-3 {
     animation-delay: 0.3s;
   }
-
+  
   .delay-4 {
     animation-delay: 0.4s;
   }
-
+  
   .delay-5 {
     animation-delay: 0.5s;
   }
-
+  
   .delay-6 {
     animation-delay: 0.6s;
   }
-
+  
   .delay-7 {
     animation-delay: 0.7s;
   }
-
+  
   .delay-8 {
     animation-delay: 0.8s;
+  }
+  .delay-9 {
+    animation-delay: 0.9s;
   }
 
   /*  ===========================================

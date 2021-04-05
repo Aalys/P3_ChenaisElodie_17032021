@@ -178,6 +178,7 @@ h2 {
   transition-duration: 0.4s;
 }
 .card .menu__like:hover:before {
+  font-weight: bold;
   color: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%) 2s;
 }
 
@@ -334,7 +335,7 @@ h2 {
   transition-duration: 0.5s;
 }
 .submenu:active .submenu__confirmation {
-  margin-right: -0.5em;
+  margin-right: -1em;
   animation: rest 0.5s;
   animation-fill-mode: forwards;
 }
@@ -354,10 +355,10 @@ h2 {
 /* Keyframes garde animation à la fin -confirmation-  */
 @keyframes rest {
   0% {
-    transform: scale(0%);
+    transform: scale(0);
   }
   100% {
-    transform: scale(100%);
+    transform: scale(1);
   }
 }
 /* Keyframes défilement du menu */

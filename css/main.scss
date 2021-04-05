@@ -5,8 +5,7 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
-// @media screen and (max-width: 576px)
-// {
+
     body{
         margin: 0;
         font-family: 'Roboto', sans-serif;
@@ -136,18 +135,21 @@ $color-tertiary: #99E2D0;
 
     .restaurants{
         background-color: #F2F2F2;
-        >h2{
-            padding: 2em 1em 0;
-        }
         .cards{
-            width: 87%;
+            width: 90%;
             border-radius: 1em;
             object-fit: cover;
             margin: auto;
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             padding-bottom: 5em;
-            grid-gap: 2em;
+            grid-gap: 47px;
+            >h2{
+                padding: 2em 0 0;
+                width: 100%;
+                margin-bottom: 0;
+            }
         }
     }
     .card{
@@ -193,6 +195,7 @@ $color-tertiary: #99E2D0;
         }
         // .menu__like:before {
         
+       
     
     }
     /*  ===========================================
@@ -223,7 +226,7 @@ $color-tertiary: #99E2D0;
             padding: 0 1em 0 0;
             width: 1.3em;
         }
-    }
+    }   
     /*  ================================================================================
         ============================== AUTRES PAGES ====================================
         ================================================================================ */ 
@@ -357,14 +360,11 @@ $color-tertiary: #99E2D0;
         }
     }
     @media screen and (min-width: 768px){
-        .submenu1{
+        .submenu1,.submenu2,.submenu3{
             width: 30%;
         }
-        .submenu2{
-            width: 30%;
-        }
-        .submenu3{
-            width: 30%;
+        .card1,.card2,.card3,.card4{
+            width: 48%;
         }
     }
     /* Keyframes garde animation à la fin -confirmation-  */ 
@@ -441,15 +441,4 @@ $color-tertiary: #99E2D0;
         padding: 4em;
     }
 
-    /* BTN heart */
-// }
 
-@media screen and (max-width: 1200px)
-{
-    body{
-        margin: 0;
-    }
-
-
-
-}

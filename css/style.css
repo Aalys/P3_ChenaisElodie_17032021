@@ -123,18 +123,21 @@ h2 {
 .restaurants {
   background-color: #F2F2F2;
 }
-.restaurants > h2 {
-  padding: 2em 1em 0;
-}
 .restaurants .cards {
-  width: 87%;
+  width: 90%;
   border-radius: 1em;
   object-fit: cover;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   padding-bottom: 5em;
-  grid-gap: 2em;
+  grid-gap: 47px;
+}
+.restaurants .cards > h2 {
+  padding: 2em 0 0;
+  width: 100%;
+  margin-bottom: 0;
 }
 
 .card {
@@ -340,16 +343,12 @@ h2 {
 }
 
 @media screen and (min-width: 768px) {
-  .submenu1 {
+  .submenu1, .submenu2, .submenu3 {
     width: 30%;
   }
 
-  .submenu2 {
-    width: 30%;
-  }
-
-  .submenu3 {
-    width: 30%;
+  .card1, .card2, .card3, .card4 {
+    width: 48%;
   }
 }
 /* Keyframes garde animation à la fin -confirmation-  */
@@ -464,13 +463,6 @@ h2 {
   margin: auto;
   justify-content: center;
   padding: 4em;
-}
-
-/* BTN heart */
-@media screen and (max-width: 1200px) {
-  body {
-    margin: 0;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

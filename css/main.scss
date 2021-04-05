@@ -5,8 +5,8 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 
-@media screen and (max-width: 576px)
-{
+// @media screen and (max-width: 576px)
+// {
     body{
         margin: 0;
         font-family: 'Roboto', sans-serif;
@@ -24,19 +24,18 @@ $color-tertiary: #99E2D0;
         ALL PAGES */
 
     .logo{
-        width: 50%;
         display: block;
         margin: auto;
-        object-fit: contain;
-        padding-top: 1em;
+        padding-top: 2em;
+        width: 180px;
       }
       .header-logo{
-        //   display: flex;
+        
           margin-bottom: 1.5em;
           position: relative;
           &__icone{
             position: absolute;
-            top: 30px;
+            top: 38 px;
             left: 30px;
             color: black;
           }
@@ -84,8 +83,12 @@ $color-tertiary: #99E2D0;
         margin-bottom: 3em;
         .fonct-list{
             display: flex;
-            flex-wrap: wrap;
             position: relative;
+
+            @media screen and (max-width:576px)
+             {
+                 flex-wrap: wrap;
+            }
             &__text{
                 width: 100%;
                 margin: 0.5em;
@@ -96,7 +99,7 @@ $color-tertiary: #99E2D0;
             }           
             &__num{
                 border-radius: 100%;
-                background-color: #9356DC;
+                background-color: $color-primary;
                 color: white;
                 height: 1em;
                 width: 1em;
@@ -123,7 +126,7 @@ $color-tertiary: #99E2D0;
             background-color: #9557e02f;
         }
         .fonct-list__icone--purple{
-             color: #9557e0;
+             color: $color-primary;
         }
     }
 
@@ -152,7 +155,7 @@ $color-tertiary: #99E2D0;
         box-shadow: 0 0 20px #0000002e;
         border-radius: 1em;
         text-decoration: none;
-        color: black;
+        color: inherit;
         position: relative;
         line-height: 6px;
         &__img{
@@ -168,7 +171,7 @@ $color-tertiary: #99E2D0;
             right: 15px;
             top: 15px;
             border-radius: 2px;
-            background-color: #99E2D0;
+            background-color: $color-tertiary;
             color: #16912a;
             padding: 0.7em;
         }
@@ -176,24 +179,21 @@ $color-tertiary: #99E2D0;
             padding: 0 1em 1em;
         }
             /* Btn heart */
-        &__like{
+        &__btn{
             position: absolute;
             right: 20px;
             bottom: 24px;
-            color: black;
-            font-weight: bold;
+            cursor: pointer;
             transition-duration: 0.4s;
         }
-        &__like--off:before{
-                display: none;
+        .menu__like:hover:before{
+            // font-weight: bold;
+            color: linear-gradient(0deg, $color-primary 0%,$color-secondary 100%) 2s;
+
         }
-        &__like--off:hover{
-            background-color: #FF79DA;
-        }  
-        &like__--on{
-                    display: none;
-         }
-           
+        // .menu__like:before {
+        
+    
     }
     /*  ===========================================
         ================ FOOTER ===================
@@ -221,9 +221,9 @@ $color-tertiary: #99E2D0;
         }
         &__icone{
             padding: 0 1em 0 0;
+            width: 1.3em;
         }
     }
-
     /*  ================================================================================
         ============================== AUTRES PAGES ====================================
         ================================================================================ */ 
@@ -241,7 +241,7 @@ $color-tertiary: #99E2D0;
     .submenu h3{
         margin: 0;
         text-transform: uppercase;
-        border-bottom: solid #99E2D0; 
+        border-bottom: solid $color-tertiary; 
         width: 2.5em;   
         padding-bottom: 3px;
     }
@@ -260,6 +260,12 @@ $color-tertiary: #99E2D0;
         border-radius: 35px 35px 0 0;
         position: relative;
         top: -50px;
+
+        @media screen and (min-width: 768px){
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 1em;
+        }
     .menu{
         width: 90%;
         margin: auto;
@@ -278,6 +284,7 @@ $color-tertiary: #99E2D0;
         margin: auto;
         row-gap: 1em;
         margin-top: 2em;
+    
         &__card {
             background-color: white;
             box-shadow: 0 0 10px #0000002e;
@@ -321,9 +328,10 @@ $color-tertiary: #99E2D0;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #99e2d0;
+            background-color: $color-tertiary;
             transform: translateX(10px);  
             transition-duration: 0.5s;
+            cursor: pointer;
         }
         &__icon{
             color: #99e2d0;
@@ -339,16 +347,40 @@ $color-tertiary: #99E2D0;
             transform: rotate(180deg);
             transition-duration: 0.5s;
         }
-        &:hover &__confirmation{
+        &:active &__confirmation{
             margin-right: -0.5em;
+            animation: rest 0.5s;
+            animation-fill-mode: forwards;
         }
-        &:hover &__aroundIcon{
+        &:active &__aroundIcon{
             transform: rotate(0);
         }
     }
+    @media screen and (min-width: 768px){
+        .submenu1{
+            width: 30%;
+        }
+        .submenu2{
+            width: 30%;
+        }
+        .submenu3{
+            width: 30%;
+        }
+    }
+    /* Keyframes garde animation à la fin -confirmation-  */ 
+    @keyframes rest{
+        0%{
+            transform: scale(0%);
+        }
+        100%{
+            transform: scale(100%);
+        }
+    }
+
+    /* Keyframes défilement du menu */
     @keyframes appear {  /* changement de taille à l'apparition durant l'animation */
         0% {
-          transform: scale(0) 
+          transform: scale(0);
         }
         100% {
           transform: scale(1);
@@ -408,6 +440,16 @@ $color-tertiary: #99E2D0;
         justify-content: center;
         padding: 4em;
     }
+
+    /* BTN heart */
+// }
+
+@media screen and (max-width: 1200px)
+{
+    body{
+        margin: 0;
+    }
+
 
 
 }

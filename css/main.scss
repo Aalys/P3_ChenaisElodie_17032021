@@ -362,7 +362,7 @@ $color-tertiary: #99E2D0;
             animation: rest 0.5s;
             animation-fill-mode: forwards;
         }
-        &:hover &__aroundIcon{
+        &:active &__aroundIcon{
             transform: rotate(0);
         }
     }

@@ -179,7 +179,6 @@ h2 {
 }
 .card .menu__like:hover:before {
   font-weight: bold;
-<<<<<<< HEAD
   transition: opacity 0.8s ease-in-out;
   opacity: 1;
   background: linear-gradient(#9356DC, #FF79DA);
@@ -190,9 +189,6 @@ h2 {
   animation-duration: 8s;
   animation-delay: 3s;
   animation-iteration-count: 3;
-=======
-  color: linear-gradient(0deg, #9356DC 0%, #FF79DA 100%) 2s;
->>>>>>> e88a0c4272fc5b38425d07df67075b1eb5b8cad8
 }
 
 /*  ===========================================
@@ -275,7 +271,6 @@ h2 {
   flex: 1;
   margin: 0;
 }
-<<<<<<< HEAD
 
 .submenu {
   width: 90%;
@@ -321,7 +316,7 @@ h2 {
   align-items: flex-end;
   font-weight: bolder;
 }
-.submenu__#confirmation1 {
+.submenu__confirmation1 {
   /* animation clic choix */
   width: 3em;
   margin: -1em -4em -1em 1em;
@@ -352,7 +347,7 @@ h2 {
   animation: rest 0.5s;
   animation-fill-mode: forwards;
 }
-.submenu:hover .submenu__aroundIcon {
+.submenu:active .submenu__aroundIcon {
   transform: rotate(0);
 }
 
@@ -388,130 +383,6 @@ h2 {
   animation-delay: 0.3s;
 }
 
-=======
-
-.submenu {
-  width: 90%;
-  margin: auto;
-  row-gap: 1em;
-  margin-top: 2em;
-}
-.submenu__card {
-  background-color: white;
-  box-shadow: 0 0 10px #0000002e;
-  border-radius: 1em;
-  padding: 1em;
-  margin: 1em 0;
-  line-height: 23px;
-  cursor: pointer;
-  overflow: hidden;
-  /* cache ce qui dépasse */
-  display: flex;
-  animation: appear 0.4s;
-  animation-timing-function: cubic-bezier(0.32, 0.42, 0.77, 0.7);
-  animation-fill-mode: both;
-}
-.submenu__title {
-  font-weight: bold;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  margin: 0;
-}
-.submenu__part {
-  flex: 1;
-}
-.submenu__desc {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  margin: 0;
-  /* empêche la box flex de s'agrandir sur la hauteur quand le prix va à gauche */
-}
-.submenu__price {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 20px;
-  padding-left: 10px;
-  align-items: flex-end;
-  font-weight: bolder;
-}
-.submenu__confirmation {
-  /* animation clic choix */
-  width: 3em;
-  margin: -1em -4em -1em 1em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #99E2D0;
-  transform: translateX(10px);
-  transition-duration: 0.5s;
-  cursor: pointer;
-}
-.submenu__icon {
-  color: #99e2d0;
-}
-.submenu__aroundIcon {
-  width: 2em;
-  height: 2em;
-  background-color: white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: rotate(180deg);
-  transition-duration: 0.5s;
-}
-.submenu:active .submenu__confirmation {
-  margin-right: -1em;
-  animation: rest 0.5s;
-  animation-fill-mode: forwards;
-}
-.submenu:active .submenu__aroundIcon {
-  transform: rotate(0);
-}
-
-@media screen and (min-width: 768px) {
-  .submenu1, .submenu2, .submenu3 {
-    width: 30%;
-  }
-
-  .card1, .card2, .card3, .card4 {
-    width: 48%;
-  }
-}
-/* Keyframes garde animation à la fin -confirmation-  */
-@keyframes rest {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-/* Keyframes défilement du menu */
-@keyframes appear {
-  /* changement de taille à l'apparition durant l'animation */
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-/* éléments apparaissent au fur et à mesure */
-.delay-1 {
-  animation-delay: 0.1s;
-}
-
-.delay-2 {
-  animation-delay: 0.2s;
-}
-
-.delay-3 {
-  animation-delay: 0.3s;
-}
-
->>>>>>> e88a0c4272fc5b38425d07df67075b1eb5b8cad8
 .delay-4 {
   animation-delay: 0.4s;
 }

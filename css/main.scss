@@ -80,6 +80,9 @@ $color-tertiary: #99E2D0;
         width: 90%;
         margin: auto;
         margin-bottom: 3em;
+        @media screen and (min-width: 768px){
+            width: 50%;
+        }
         .fonct-list{
             display: flex;
             position: relative;
@@ -145,6 +148,9 @@ $color-tertiary: #99E2D0;
             justify-content: center;
             padding-bottom: 5em;
             grid-gap: 47px;
+            @media screen and (min-width: 768px){
+                width: 70%;
+            }
             >h2{
                 padding: 2em 0 0;
                 width: 100%;
@@ -160,6 +166,11 @@ $color-tertiary: #99E2D0;
         color: inherit;
         position: relative;
         line-height: 6px;
+        max-width: 500px;
+        @media screen and (min-width: 768px){
+            min-width: 500px;
+            max-width: none;
+        }
         &__img{
             height: 12em;
             width: 100%;
@@ -188,22 +199,16 @@ $color-tertiary: #99E2D0;
             cursor: pointer;
             transition-duration: 0.4s;
         }
-        .menu__like:hover:before{
-                font-weight: bold;
-                transition: opacity 0.8s ease-in-out;
-                opacity: 1;
-                background: linear-gradient(#9356DC, #FF79DA);
-                background-clip: text;
-                -webkit-background-clip: text;
-                color: transparent;
-                animation-name: thrill;
-                animation-duration: 8s;
-                animation-delay: 3s;
-                animation-iteration-count: 3;
+        .menu__like:hover{
+            font-weight: bold;
+            transition: 1s ease-in-out;
+            -webkit-transition: opacity 0.5 2s ease-in-out;
+            -moz-transition: visibility;
+            background: linear-gradient($color-primary, $color-secondary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
         }
-        // .menu__like:before {
-        
-       
     
     }
     /*  ===========================================
@@ -285,9 +290,7 @@ $color-tertiary: #99E2D0;
                 flex: 1;
                 margin: 0;
             }
-            // &__btnlike{
-            //     // padding: 1em 1em 0 1em;
-            // }
+
         }
     }
     .submenu{
@@ -306,7 +309,7 @@ $color-tertiary: #99E2D0;
             cursor: pointer; 
             overflow: hidden; /* cache ce qui dépasse */
             display: flex;
-            animation: appear 0.4s;
+            animation: appear 0.5s;
             animation-fill-mode: both;
         }
         &__title{
@@ -332,7 +335,7 @@ $color-tertiary: #99E2D0;
             align-items: flex-end;
             font-weight: bolder;
         }
-        &__confirmation1{   /* animation clic choix */
+        &__confirmation{   /* animation clic choix */
             width: 3em;
             margin: -1em -4em -1em 1em;
             display: flex;
@@ -357,8 +360,8 @@ $color-tertiary: #99E2D0;
             transform: rotate(180deg);
             transition-duration: 0.5s;
         }
-        &:hover &__confirmation{
-            margin-right: -0.5em;
+        &:active &__confirmation{
+            margin-right: -1em;
             animation: rest 0.5s;
             animation-fill-mode: forwards;
         }
@@ -377,8 +380,8 @@ $color-tertiary: #99E2D0;
     /* Keyframes défilement du menu */
     @keyframes appear {  /* changement de taille à l'apparition durant l'animation */
         0% {
-            transform: translate(0,60px) scale(0.1);
-        }
+            transform: translate(1px, 50px) scale(0);
+        } 
         100% {
           transform: scale(1);
         }
@@ -423,7 +426,7 @@ $color-tertiary: #99E2D0;
 
     .btn{
         color: white;
-        background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+        background-image: linear-gradient(-9deg,$color-primary,$color-secondary);
         font-weight: bolder;
         font-size: 1.1rem;
         border-radius: 100px;

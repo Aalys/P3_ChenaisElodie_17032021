@@ -197,7 +197,7 @@ h2 {
 .card .menu__like:hover {
   font-weight: bold;
   transition: 1s ease-in-out;
-  -webkit-transition: opacity 0.5 2s ease-in-out;
+  -webkit-transition: opacity 0.5 ease-in-out;
   -moz-transition: visibility;
   background: linear-gradient(#9356DC, #FF79DA);
   background-clip: text;
@@ -428,6 +428,42 @@ h2 {
 
 .delay-9 {
   animation-delay: 0.9s;
+}
+
+.delay-0 {
+  animation-delay: 0s;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
+.delay-6 {
+  animation-delay: 0.6s;
+}
+
+.delay-7 {
+  animation-delay: 0.7s;
+}
+
+.delay-8 {
+  animation-delay: 0.8s;
 }
 
 /*  ===========================================

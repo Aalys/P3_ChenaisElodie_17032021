@@ -113,7 +113,14 @@ $color-tertiary: #99E2D0;
                 margin-right: 1em;
                 position: absolute;
                 left: -2px;
+                
+                @media screen and (min-width: 576px){
+                    position: relative;
+                    left: -33px;
+                    float: left;
+                }
             }
+        }
             &__desc{
                 align-items: center;
             }
@@ -130,7 +137,7 @@ $color-tertiary: #99E2D0;
         .fonct-list__icone--purple{
              color: $color-primary;
         }
-    }
+    
 
     /*  ===========================================
         =========== SECTION RESTAURANTS ===========

@@ -108,17 +108,26 @@ h2 {
   position: absolute;
   left: -2px;
 }
-.fonct .fonct-list__desc {
+@media screen and (min-width: 576px) {
+  .fonct .fonct-list__num {
+    position: relative;
+    left: -33px;
+    float: left;
+  }
+}
+.fonct__desc {
   align-items: center;
 }
-.fonct .fonct-list__icone {
+.fonct__icone {
   color: gray;
   padding-right: 1em;
 }
-.fonct .fonct-list__text--purple {
+
+.fonct-list__text--purple {
   background-color: #9557e02f;
 }
-.fonct .fonct-list__icone--purple {
+
+.fonct-list__icone--purple {
   color: #9356DC;
 }
 

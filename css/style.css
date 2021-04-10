@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -27,7 +25,7 @@ h2 {
 }
 .header-logo__icone {
   position: absolute;
-  top: 38 px;
+  top: 38px;
   left: 30px;
   color: black;
 }
@@ -54,7 +52,7 @@ h2 {
   border-top: 2px solid #c5c5c5;
 }
 .local .local-pres {
-  width: 65%;
+  width: 80%;
   margin: auto;
   text-align: center;
   padding-bottom: 1em;
@@ -93,6 +91,9 @@ h2 {
   padding: 1.5em;
   background-color: #F2F2F2;
 }
+.fonct .fonct-list__text--purple {
+  background-color: #9557e02f;
+}
 .fonct .fonct-list__num {
   border-radius: 100%;
   background-color: #9356DC;
@@ -115,19 +116,15 @@ h2 {
     float: left;
   }
 }
-.fonct__desc {
+.fonct .fonct-list__desc {
   align-items: center;
+  font-weight: 600;
 }
-.fonct__icone {
+.fonct .fonct-list__icone {
   color: gray;
-  padding-right: 1em;
+  padding-right: 10px;
 }
-
-.fonct-list__text--purple {
-  background-color: #9557e02f;
-}
-
-.fonct-list__icone--purple {
+.fonct .fonct-list__icone--purple {
   color: #9356DC;
 }
 
@@ -168,7 +165,7 @@ h2 {
   position: relative;
   line-height: 6px;
   max-width: 500px;
-  /* Btn heart */
+  /* Btn heart - voir boutons en bas de page css */
 }
 @media screen and (min-width: 768px) {
   .card {
@@ -192,26 +189,16 @@ h2 {
   background-color: #99E2D0;
   color: #16912a;
   padding: 0.7em;
+  font-weight: 700;
 }
 .card__total {
   padding: 0 1em 1em;
 }
 .card__btn {
+  cursor: pointer;
   position: absolute;
   right: 20px;
   bottom: 24px;
-  cursor: pointer;
-  transition-duration: 0.4s;
-}
-.card .menu__like:hover {
-  font-weight: bold;
-  transition: 1s ease-in-out;
-  -webkit-transition: opacity 0.5 ease-in-out;
-  -moz-transition: visibility;
-  background: linear-gradient(#9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
 }
 
 /*  ===========================================
@@ -283,6 +270,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     column-gap: 1em;
+    width: 95%;
   }
 }
 .menu-container .menu {
@@ -315,34 +303,34 @@ h2 {
   animation: appear 0.5s;
   animation-fill-mode: both;
 }
-.submenu__title {
+.submenu__card__title {
   font-weight: bold;
   white-space: nowrap;
   text-overflow: ellipsis;
   margin: 0;
 }
-.submenu__part {
+.submenu__card__part {
   flex: 1;
-}
-.submenu__desc {
   white-space: nowrap;
+  overflow: hidden;
+}
+.submenu__card__desc {
   text-overflow: ellipsis;
   overflow: hidden;
   margin: 0;
   /* empêche la box flex de s'agrandir sur la hauteur quand le prix va à gauche */
 }
-.submenu__price {
+.submenu__card__price {
   display: flex;
   justify-content: flex-end;
-  margin-right: 20px;
   padding-left: 10px;
   align-items: flex-end;
   font-weight: bolder;
 }
-.submenu__confirmation {
+.submenu__card__confirmation {
   /* animation clic choix */
-  width: 3em;
-  margin: -1em -4em -1em 1em;
+  width: 4em;
+  margin: -1em -5em -1em 1em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -351,10 +339,10 @@ h2 {
   transition-duration: 0.5s;
   cursor: pointer;
 }
-.submenu__icon {
+.submenu__card__icon {
   color: #99e2d0;
 }
-.submenu__aroundIcon {
+.submenu__card__aroundIcon {
   width: 2em;
   height: 2em;
   background-color: white;
@@ -365,12 +353,12 @@ h2 {
   transform: rotate(180deg);
   transition-duration: 0.5s;
 }
-.submenu:active .submenu__confirmation {
-  margin-right: -1em;
+.submenu__card:hover .submenu__card__confirmation {
+  margin-right: -0.5em;
   animation: rest 0.5s;
   animation-fill-mode: forwards;
 }
-.submenu:active .submenu__aroundIcon {
+.submenu__card:hover .submenu__card__aroundIcon {
   transform: rotate(0);
 }
 
@@ -471,6 +459,7 @@ h2 {
     ===========================================  
    ALL PAGES */
 .btn {
+  /* design du bouton */
   color: white;
   background-image: linear-gradient(-9deg, #9356DC, #FF79DA);
   font-weight: bolder;
@@ -482,10 +471,22 @@ h2 {
 }
 
 .menu__btn {
+  /* position du bouton en bas de page */
   display: flex;
   margin: auto;
   justify-content: center;
   padding: 4em;
+}
+
+.menu__like:hover {
+  font-weight: bold;
+  transition: 1s ease-in-out;
+  -webkit-transition: opacity 0.5 ease-in-out;
+  -moz-transition: visibility;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */

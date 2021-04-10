@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
@@ -34,7 +32,7 @@ $color-tertiary: #99E2D0;
           position: relative;
           &__icone{
             position: absolute;
-            top: 38 px;
+            top: 38px;
             left: 30px;
             color: black;
           }
@@ -63,7 +61,7 @@ $color-tertiary: #99E2D0;
             border-top: 2px solid rgb(197, 197, 197);
         }
         .local-pres{
-            width: 65%;
+            width: 80%;
             margin: auto;
             text-align: center;
             padding-bottom: 1em;
@@ -76,10 +74,11 @@ $color-tertiary: #99E2D0;
         ========= SECTION FONCTIONNEMENT ==========
         ===========================================  */ 
     
-    .fonct {
+    .fonct{
         width: 90%;
         margin: auto;
         margin-bottom: 3em;
+
         @media screen and (min-width: 768px){
             width: 50%;
         }
@@ -98,6 +97,9 @@ $color-tertiary: #99E2D0;
                 box-shadow: 1px 7px 9px #0000002e;
                 padding: 1.5em;
                 background-color: #F2F2F2;
+                &--purple{
+                    background-color: #9557e02f;
+                }
             }           
             &__num{
                 border-radius: 100%;
@@ -120,24 +122,21 @@ $color-tertiary: #99E2D0;
                     float: left;
                 }
             }
-        }
             &__desc{
                 align-items: center;
+                font-weight: 600;
             }
             &__icone{
                 color: gray;
-                padding-right: 1em;
+                padding-right: 10px;
+                &--purple{
+                    color: $color-primary;
+                }
             }
+        }
             
-        }
-        .fonct-list__text--purple{
+    }
 
-            background-color: #9557e02f;
-        }
-        .fonct-list__icone--purple{
-             color: $color-primary;
-        }
-    
 
     /*  ===========================================
         =========== SECTION RESTAURANTS ===========
@@ -194,30 +193,20 @@ $color-tertiary: #99E2D0;
             background-color: $color-tertiary;
             color: #16912a;
             padding: 0.7em;
+            font-weight: 700;
         }
         &__total{
             padding: 0 1em 1em;
         }
-            /* Btn heart */
+            /* Btn heart - voir boutons en bas de page css */
         &__btn{
+            cursor: pointer;
             position: absolute;
             right: 20px;
             bottom: 24px;
-            cursor: pointer;
-            transition-duration: 0.4s;
         }
-        .menu__like:hover{
-            font-weight: bold;
-            transition: 1s ease-in-out;
-            -webkit-transition: opacity 0.5 ease-in-out;
-            -moz-transition: visibility;
-            background: linear-gradient($color-primary, $color-secondary);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-        }
-    
     }
+ 
     /*  ===========================================
         ================ FOOTER ===================
         ===========================================  
@@ -288,6 +277,7 @@ $color-tertiary: #99E2D0;
         display: flex;
         flex-wrap: wrap;
         column-gap: 1em;
+        width: 95%;
         }
     .menu{
         width: 90%;
@@ -318,64 +308,68 @@ $color-tertiary: #99E2D0;
             display: flex;
             animation: appear 0.5s;
             animation-fill-mode: both;
-        }
-        &__title{
-            font-weight: bold;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            margin: 0;
-        }
-        &__part{
-            flex: 1;
-        }
-        &__desc{
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            margin: 0; /* empêche la box flex de s'agrandir sur la hauteur quand le prix va à gauche */
-        }
-        &__price{
-            display: flex;
-            justify-content: flex-end;
-            margin-right: 20px;
-            padding-left: 10px;
-            align-items: flex-end;
-            font-weight: bolder;
-        }
-        &__confirmation{   /* animation clic choix */
-            width: 3em;
-            margin: -1em -4em -1em 1em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: $color-tertiary;
-            transform: translateX(10px);  
-            transition-duration: 0.5s;
-            cursor: pointer;
-        }
-        &__icon{
-            color: #99e2d0;
-        }
-        &__aroundIcon{
-            width: 2em;
-            height: 2em;
-            background-color:white;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transform: rotate(180deg);
-            transition-duration: 0.5s;
-        }
-        &:active &__confirmation{
-            margin-right: -1em;
-            animation: rest 0.5s;
-            animation-fill-mode: forwards;
-        }
-        &:active &__aroundIcon{
-            transform: rotate(0);
+            &__title{
+                font-weight: bold;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                margin: 0;
+            }
+            &__part{
+                flex: 1;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            &__desc{
+                text-overflow: ellipsis;
+                overflow: hidden;
+                margin: 0; /* empêche la box flex de s'agrandir sur la hauteur quand le prix va à gauche */
+            }
+            &__price{
+                display: flex;
+                justify-content: flex-end;
+                padding-left: 10px;
+                align-items: flex-end;
+                font-weight: bolder;
+            }
+            &__confirmation{
+                    /* animation clic choix */
+                    width: 4em;
+                    margin: -1em -5em -1em 1em;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $color-tertiary;
+                    transform: translateX(10px);  
+                    transition-duration: 0.5s;
+                    cursor: pointer;
+            }
+            &__icon{
+                    color: #99e2d0;
+                }
+            &__aroundIcon{
+                    width: 2em;
+                    height: 2em;
+                    background-color:white;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transform: rotate(180deg);
+                    transition-duration: 0.5s;
+                }
+            &:hover &__confirmation{
+                margin-right: -0.5em;
+                animation: rest 0.5s;
+                animation-fill-mode: forwards;
+            }
+            &:hover &__aroundIcon{
+                transform: rotate(0);
+            }
+                
         }
     }
+    
+
     @media screen and (min-width: 768px){
         .submenu1,.submenu2,.submenu3{
             width: 30%;
@@ -431,7 +425,7 @@ $color-tertiary: #99E2D0;
          ===========================================  
         ALL PAGES */ 
 
-    .btn{
+    .btn{    /* design du bouton */
         color: white;
         background-image: linear-gradient(-9deg,$color-primary,$color-secondary);
         font-weight: bolder;
@@ -441,11 +435,23 @@ $color-tertiary: #99E2D0;
         border: none;
         box-shadow: 2px 7px 9px #0000002e;
     }
-    .menu__btn{
+    .menu__btn{   /* position du bouton en bas de page */
         display: flex;
         margin: auto;
         justify-content: center;
-        padding: 4em;
+        padding: 4em;    
     }
+    
+    .menu__like:hover{
+        font-weight: bold;
+        transition: 1s ease-in-out;
+        -webkit-transition: opacity 0.5 ease-in-out;
+        -moz-transition: visibility;
+        background: linear-gradient($color-primary, $color-secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
 
 

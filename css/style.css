@@ -383,15 +383,6 @@ h2 {
     width: 48%;
   }
 }
-/* Keyframes garde animation à la fin -confirmation-  */
-@keyframes rest {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 /* Keyframes défilement du menu */
 @keyframes appear {
   /* changement de taille à l'apparition durant l'animation */

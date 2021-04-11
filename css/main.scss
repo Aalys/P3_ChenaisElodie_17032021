@@ -21,23 +21,23 @@ $color-tertiary: #99E2D0;
             cursor: progress; 
             z-index: 10000;  
             width: 100%;
-            height: 2090px;
+            height: 155%;
             animation: back-spinner 1s;
             animation-delay: 1.5s;
             animation-fill-mode: both;
             &__load{
-                content: "";
+                // content: "";
                 border-radius: 100%;
                 width: 5em;
                 height: 4em;
                 margin: 60px auto;
                 position: relative;
-                top: 10em;
+                top: 20em;
                 border-top: 1em solid $color-tertiary;
                 border-right: 1em solid $color-secondary;
                 border-bottom: 1em solid $color-primary;
                 border-left: 1em solid linear-gradient($color-primary, $color-secondary, $color-tertiary );
-                animation: spinner 1.5s linear;
+                animation: spinner 1.3s linear;
             }
         }
 

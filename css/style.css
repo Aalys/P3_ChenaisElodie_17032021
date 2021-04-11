@@ -16,24 +16,23 @@ h2 {
   cursor: progress;
   z-index: 10000;
   width: 100%;
-  height: 2090px;
+  height: 155%;
   animation: back-spinner 1s;
   animation-delay: 1.5s;
   animation-fill-mode: both;
 }
 .spinner__load {
-  content: "";
   border-radius: 100%;
   width: 5em;
   height: 4em;
   margin: 60px auto;
   position: relative;
-  top: 10em;
+  top: 20em;
   border-top: 1em solid #99E2D0;
   border-right: 1em solid #FF79DA;
   border-bottom: 1em solid #9356DC;
   border-left: 1em solid linear-gradient(#9356DC, #FF79DA, #99E2D0);
-  animation: spinner 1.5s linear;
+  animation: spinner 1.3s linear;
 }
 
 @keyframes back-spinner {
@@ -333,6 +332,7 @@ h2 {
 .menu-container .menu__title {
   flex: 1;
   margin: 0;
+  font-family: "Shrikhand", cursive;
 }
 
 .submenu {
@@ -427,7 +427,7 @@ h2 {
 @keyframes appear {
   /* changement de taille à l'apparition durant l'animation */
   0% {
-    transform: translate(1px, 50px) scale(0);
+    transform: scale(0);
   }
   100% {
     transform: scale(1);

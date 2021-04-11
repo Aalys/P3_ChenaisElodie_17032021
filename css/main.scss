@@ -7,9 +7,6 @@ $color-tertiary: #99E2D0;
     body{
         margin: 0;
         font-family: 'Roboto', sans-serif;
-        // &__menu{
-        //     background-color: #F2F2F2;
-        // }
     }
     h2{
         font-weight: 900;
@@ -341,6 +338,7 @@ $color-tertiary: #99E2D0;
             &__title{
                 flex: 1;
                 margin: 0;
+                font-family: 'Shrikhand', cursive;
             }
 
         }
@@ -436,7 +434,7 @@ $color-tertiary: #99E2D0;
     /* Keyframes défilement du menu */
     @keyframes appear {  /* changement de taille à l'apparition durant l'animation */
         0% {
-            transform: translate(1px, 50px) scale(0);
+            transform: /* translate(1px, 50px)*/ scale(0);
         } 
         100% {
           transform: scale(1);

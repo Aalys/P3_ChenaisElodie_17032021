@@ -9,6 +9,58 @@ h2 {
 }
 
 /*  ===========================================
+    =============== SPINNER ===================
+    ===========================================    */
+.spinner {
+  position: absolute;
+  cursor: progress;
+  z-index: 10000;
+  width: 100%;
+  height: 2090px;
+  animation: back-spinner 1s;
+  animation-delay: 1.5s;
+  animation-fill-mode: both;
+}
+.spinner__load {
+  content: "";
+  border-radius: 100%;
+  width: 5em;
+  height: 4em;
+  margin: 60px auto;
+  position: relative;
+  top: 10em;
+  border-top: 1em solid #99E2D0;
+  border-right: 1em solid #FF79DA;
+  border-bottom: 1em solid #9356DC;
+  border-left: 1em solid linear-gradient(#9356DC, #FF79DA, #99E2D0);
+  animation: spinner 1.5s linear;
+}
+
+@keyframes back-spinner {
+  0% {
+    opacity: 0.9;
+    background-color: white;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    border-top: 1em solid #9356DC;
+    border-right: 1em solid #99E2D0;
+    border-bottom: 1em solid #FF79DA;
+    border-left: 1em solid linear-gradient(#9356DC, #FF79DA, #99E2D0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*  ===========================================
     ================ HEADER ===================
     ===========================================   
     ALL PAGES */
@@ -71,7 +123,7 @@ h2 {
 }
 @media screen and (min-width: 768px) {
   .fonct {
-    width: 50%;
+    width: 75%;
   }
 }
 .fonct .fonct-list {
@@ -468,6 +520,11 @@ h2 {
   padding: 0.7em 1em;
   border: none;
   box-shadow: 2px 7px 9px #0000002e;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.8;
+  box-shadow: 7px 8px 10px #0000002e;
 }
 
 .menu__btn {
@@ -487,6 +544,7 @@ h2 {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

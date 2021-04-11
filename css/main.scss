@@ -16,6 +16,61 @@ $color-tertiary: #99E2D0;
     }
 
     /*  ===========================================
+        =============== SPINNER ===================
+        ===========================================    */
+
+        .spinner{
+            position: absolute;
+            cursor: progress; 
+            z-index: 10000;  
+            width: 100%;
+            height: 2090px;
+            animation: back-spinner 1s;
+            animation-delay: 1.5s;
+            animation-fill-mode: both;
+            &__load{
+                content: "";
+                border-radius: 100%;
+                width: 5em;
+                height: 4em;
+                margin: 60px auto;
+                position: relative;
+                top: 10em;
+                border-top: 1em solid $color-tertiary;
+                border-right: 1em solid $color-secondary;
+                border-bottom: 1em solid $color-primary;
+                border-left: 1em solid linear-gradient($color-primary, $color-secondary, $color-tertiary );
+                animation: spinner 1.5s linear;
+            }
+        }
+
+        @keyframes back-spinner{
+            0% {
+                opacity: 0.9;
+                background-color: hsla(0,0%,100%);
+            }
+            100% {
+                opacity: 0;
+                z-index: -10;
+            }
+        }
+        @keyframes spinner{
+            0%{
+                transform: rotate(0deg);
+            }       
+            50%{
+                border-top: 1em solid $color-primary;
+                border-right: 1em solid $color-tertiary;
+                border-bottom: 1em solid $color-secondary;
+                border-left: 1em solid linear-gradient($color-primary, $color-secondary, $color-tertiary );
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        
+
+    /*  ===========================================
         ================ HEADER ===================
         ===========================================   
         ALL PAGES */
@@ -80,7 +135,7 @@ $color-tertiary: #99E2D0;
         margin-bottom: 3em;
 
         @media screen and (min-width: 768px){
-            width: 50%;
+            width: 75%;
         }
         .fonct-list{
             display: flex;
@@ -88,7 +143,7 @@ $color-tertiary: #99E2D0;
 
             @media screen and (max-width:576px)
              {
-                 flex-wrap: wrap;
+                flex-wrap: wrap;
             }
             &__text{
                 width: 100%;
@@ -434,6 +489,11 @@ $color-tertiary: #99E2D0;
         padding: 0.7em 1em;
         border: none;
         box-shadow: 2px 7px 9px #0000002e;
+        cursor: pointer;
+        &:hover{
+                opacity: 0.8;
+                box-shadow: 7px 8px 10px #0000002e;
+        }
     }
     .menu__btn{   /* position du bouton en bas de page */
         display: flex;
@@ -451,6 +511,7 @@ $color-tertiary: #99E2D0;
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
+        cursor: pointer;
     }
 
 

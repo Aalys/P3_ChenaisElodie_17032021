@@ -9,88 +9,150 @@
     </head>
 
     <body>
-        <!-- Logo du site -->
+            <!-- Logo du site -->
         <header>
             <div class="header-logo">
                 <a href="index.html"><i class="fas fa-arrow-left header-logo__icone"></i></a>
                 <img src="images/logo/ohmyfood.png" class="logo" alt="logo">
             </div>
         </header>
-        <img src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="" class="menu-photo"> 
+
+        <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" class="menu-photo"> 
 
         <main class="menu-container">
             <!-- En-tête -->
             <section class="menu">
                     <h2 class="menu__title">À la française</h2>
-                <div class="menu__btnlike">
-                    <i class="menu__like menu__like--off far fa-heart fa-2x"></i>
-                    <i class="menu__like menu__like--on fas fa-heart fa-2x"></i>
-                </div>
+                    <div class="men__btn">
+                        <i class="menu__like far fa-heart fa-2x" aria-hidden="true"></i>
+                    </div>
             </section>
 
             <!-- Menus -->
-            <section class="submenu">
+            <section class="submenu submenu1">
                 <h3>Entrées</h3>
-                <div class="submenu__card"> 
-                    <div class="submenu__part">
-                        <div class="submenu__title">Tartare de poulpe acidulé</div>
-                        <div class="submenu__desc">Aux zestes d'orange </div>
+                <div class="submenu__card delay-1"> 
+                    <div class="submenu__card__part">
+                        <div class="submenu__card__title">Tartare de poulpe acidulé</div>
+                        <div class="submenu__card__desc">Aux zestes d'orange</div>
                     </div>
-                    <div class="submenu__price">25€</div>
+                    <div class="submenu__card__price">25€</div>
+                    <div class="submenu__card__confirmation">
+                        <div class="submenu__card__aroundIcon">
+                            <i class="fa-check fas submenu__card__icon" aria-hidden="true"></i> <!-- masque élément non actif -->
+                
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="submenu__card"> 
-                    <div class="submenu__title">Velouté de légumes d'antan</div>
-                    <div class="submenu__desc">Carotte, panais, topinambour</div>
-                    <div class="submenu__price">35€</div>
+                <div class="submenu__card delay-2"> 
+                    <div class="submenu__card__part">
+                        <div class="submenu__card__title">Velouté de légumes d'antan</div>
+                        <div class="submenu__card__desc">Carotte, panais, topinambour</div>
+                    </div>
+                    <div class="submenu__card__price">35€</div>
+                    <div class="submenu__card__confirmation">
+                        <div class="submenu__card__aroundIcon">
+                            <i class="fa-check fas submenu__card__icon" aria-hidden="true"></i> <!-- masque élément non actif -->
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="submenu__card">
-                    <div class="submenu__title">Soupe à l'oignon</div>
-                    <div class="submenu__desc">Revisitée</div>
-                    <div class="submenu__price">20€</div>
+                <div class="submenu__card delay-3">
+                    <div class="submenu__card__part">
+                        <div class="submenu__card__title">Soupe à l'oignon</div>
+                        <div class="submenu__card__desc">Revisitée</div>
+                    </div>
+                    <div class="submenu__card__price">20€</div>
+                    <div class="submenu__card__confirmation">
+                        <div class="submenu__card__aroundIcon">
+                            <i class="fa-check fas submenu__card__icon" aria-hidden="true"></i> <!-- masque élément non actif -->
+                        </div>
+                    </div>
                 </div>
             </section>
             
-            <section class="submenu">
+            <section class="submenu submenu2">
                 <h3>Plats</h3>
-                <div class="submenu__card">
-                    <div class="submenu__title">Coquilles Saint-Jacques</div>
-                    <div class="submenu__desc">Accompagnées d'une purée de panais</div>
-                    <div class="submenu__price">40€</div>
+                <div class="submenu__card delay-4">
+                    <div class="submenu__card__part">
+                        <div class="submenu__card__title">Coquilles Saint-Jacques</div>
+                        <div class="submenu__card__desc">Accompagnées d'une purée de panais</div>
+                    </div>
+                    <div class="submenu__card__price">40€</div>
+                    <div class="submenu__card__confirmation">
+                        <div class="submenu__card__aroundIcon">
+                            <i class="fa-check fas submenu__card__icon" aria-hidden="true"></i> <!-- masque élément non actif -->
+                        </div>
+                    </div>
                 </div>
 
-                <div class="submenu__card">
-                    <div class="submenu__title">Magret de canard</div>
-                    <div class="submenu__desc">Et parmentier de pommes de terre</div>
-                    <div class="submenu__price">35€</div>
+                <div class="submenu__card delay-5">
+                    <div class="submenu__card__part">
+                        <div class="submenu__card__title">Magret de canard</div>
+                        <div class="submenu__card__desc">Et parmentier de pommes de terre</div>
+                    </div>
+                    <div class="submenu__card__price">35€</div>
+                    <div class="submenu__card__confirmation">
+                        <div class="submenu__card__aroundIcon">
+                            <i class="fa-check fas submenu__card__icon" aria-hidden="true"></i> <!-- masque élément non actif -->
+                        </div>
+                    </div>
                 </div>
-         
-                <div class="submenu__card">
-                    <div class="submenu__title">Pigeonneau d’Ille-et-Vilaine</div>
-                    <div class="submenu__desc">Sur son lit de gnocchis aux légumes</div>
-                    <div class="submenu__price">44€</div>
+        
+                <div class="submenu__card delay-6">
+                    <div class="submenu__card__part">
+                        <div class="submenu__card__title">Pigeonneau d’Ille-et-Vilaine</div>
+                        <div class="submenu__card__desc">Sur son lit de gnocchis aux légumes</div>
+                    </div>
+                    <div class="submenu__card__price">44€</div>
+                    <div class="submenu__card__confirmation">
+                        <div class="submenu__card__aroundIcon">
+                            <i class="fa-check fas submenu__card__icon" aria-hidden="true"></i> <!-- masque élément non actif -->
+                        </div>
+                    </div>
                 </div>
             </section>
                     
-            <section class="submenu">
+            <section class="submenu submenu3">
                 <h3>Desserts</h3>
-                <div class="submenu__card">
-                    <div class="submenu__title">Pétales de violettes glacés</div>
-                    <div class="submenu__desc">Et purée de noisettes</div>
-                    <div class="submenu__price">18€</div>
+                <div class="submenu__card delay-7">
+                    <div class="submenu__card__part">
+                        <div class="submenu__card__title">Pétales de violettes glacés</div>
+                        <div class="submenu__card__desc">Et purée de noisettes</div>
+                    </div>
+                    <div class="submenu__card__price">18€</div>
+                    <div class="submenu__card__confirmation">
+                        <div class="submenu__card__aroundIcon">
+                            <i class="fa-check fas submenu__card__icon" aria-hidden="true"></i> <!-- masque élément non actif -->
+                        </div>
+                    </div>
                 </div>
 
-                <div class="submenu__card">
-                    <div class="submenu__title">Fondant au chocolat </div>
-                    <div class="submenu__desc">Revisité</div>
-                    <div class="submenu__price">22€</div>
+                <div class="submenu__card delay-8">
+                    <div class="submenu__card__part">
+                        <div class="submenu__card__title">Fondant au chocolat</div>
+                        <div class="submenu__card__desc">Revisité</div>
+                    </div>
+                    <div class="submenu__card__price">22€</div>
+                    <div class="submenu__card__confirmation">
+                        <div class="submenu__card__aroundIcon">
+                            <i class="fa-check fas submenu__card__icon" aria-hidden="true"></i> <!-- masque élément non actif -->
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="submenu__card">
-                    <div class="submenu__title">Millefeuille croustillant</div>
-                    <div class="submenu__desc">Myrtilles et pâte d’amande</div>
-                    <div class="submenu__price"> 23€</div>
+                <div class="submenu__card delay-9">
+                    <div class="submenu__card__part">
+                        <div class="submenu__card__title"> Millefeuille croustillant</div>
+                        <div class="submenu__card__desc">Myrtilles et pâte d’amande </div>
+                    </div>
+                    <div class="submenu__card__price"> 23€</div>
+                    <div class="submenu__card__confirmation">
+                        <div class="submenu__card__aroundIcon">
+                            <i class="fa-check fas submenu__card__icon" aria-hidden="true"></i> <!-- masque élément non actif -->
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -99,7 +161,7 @@
             </div>
         </main>
 
-         <!-- Footer identiques sur chaque page -->
+        <!-- Footer identiques sur chaque page -->
         <footer class="footer">
             <div class="container">
                 <div class="footer__logo">ohmyfood</div>
@@ -117,7 +179,8 @@
                         <a class="footer__link" href="contact@ohmyfood.com">Contact</a>
                     </li>
                 </ul>
-              </div>
+            </div>
         </footer>
+    
     </body>
 </html>

@@ -1,0 +1,518 @@
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+
+
+    body{
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        // &__menu{
+        //     background-color: #F2F2F2;
+        // }
+    }
+    h2{
+        font-weight: 900;
+    }
+
+    /*  ===========================================
+        =============== SPINNER ===================
+        ===========================================    */
+
+        .spinner{
+            position: absolute;
+            cursor: progress; 
+            z-index: 10000;  
+            width: 100%;
+            height: 2090px;
+            animation: back-spinner 1s;
+            animation-delay: 1.5s;
+            animation-fill-mode: both;
+            &__load{
+                content: "";
+                border-radius: 100%;
+                width: 5em;
+                height: 4em;
+                margin: 60px auto;
+                position: relative;
+                top: 10em;
+                border-top: 1em solid $color-tertiary;
+                border-right: 1em solid $color-secondary;
+                border-bottom: 1em solid $color-primary;
+                border-left: 1em solid linear-gradient($color-primary, $color-secondary, $color-tertiary );
+                animation: spinner 1.5s linear;
+            }
+        }
+
+        @keyframes back-spinner{
+            0% {
+                opacity: 0.9;
+                background-color: hsla(0,0%,100%);
+            }
+            100% {
+                opacity: 0;
+                z-index: -10;
+            }
+        }
+        @keyframes spinner{
+            0%{
+                transform: rotate(0deg);
+            }       
+            50%{
+                border-top: 1em solid $color-primary;
+                border-right: 1em solid $color-tertiary;
+                border-bottom: 1em solid $color-secondary;
+                border-left: 1em solid linear-gradient($color-primary, $color-secondary, $color-tertiary );
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        
+
+    /*  ===========================================
+        ================ HEADER ===================
+        ===========================================   
+        ALL PAGES */
+
+    .logo{
+        display: block;
+        margin: auto;
+        padding-top: 2em;
+        width: 180px;
+      }
+      .header-logo{
+        
+          margin-bottom: 1.5em;
+          position: relative;
+          &__icone{
+            position: absolute;
+            top: 38px;
+            left: 30px;
+            color: black;
+          }
+        }
+
+    /*  ================================================================================
+        ================================ HOMEPAGE ======================================
+        ================================================================================ */ 
+
+    /*  ===========================================
+        ============ SECTION  LOCAL ===============
+        ===========================================  */ 
+
+    .local{
+        width: 100%;
+        background-color: #F2F2F2;
+        display: flex;
+        flex-direction: column;
+        margin-top: 1em;
+        margin-bottom: 3em;
+        .local-map{
+            display: flex;
+            justify-content: center;
+            padding: 0.7em 0;
+            background-color: #e4e4e4;
+            border-top: 2px solid rgb(197, 197, 197);
+        }
+        .local-pres{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-bottom: 1em;
+        }
+        &__icone{
+            padding: 0 1em;
+        }
+    }
+    /*  ===========================================
+        ========= SECTION FONCTIONNEMENT ==========
+        ===========================================  */ 
+    
+    .fonct{
+        width: 90%;
+        margin: auto;
+        margin-bottom: 3em;
+
+        @media screen and (min-width: 768px){
+            width: 75%;
+        }
+        .fonct-list{
+            display: flex;
+            position: relative;
+
+            @media screen and (max-width:576px)
+             {
+                flex-wrap: wrap;
+            }
+            &__text{
+                width: 100%;
+                margin: 0.5em;
+                border-radius: 1.3em;
+                box-shadow: 1px 7px 9px #0000002e;
+                padding: 1.5em;
+                background-color: #F2F2F2;
+                &--purple{
+                    background-color: #9557e02f;
+                }
+            }           
+            &__num{
+                border-radius: 100%;
+                background-color: $color-primary;
+                color: white;
+                height: 1em;
+                width: 1em;
+                min-height: 1.3em;
+                min-width: 1.3em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 1em;
+                position: absolute;
+                left: -2px;
+                
+                @media screen and (min-width: 576px){
+                    position: relative;
+                    left: -33px;
+                    float: left;
+                }
+            }
+            &__desc{
+                align-items: center;
+                font-weight: 600;
+            }
+            &__icone{
+                color: gray;
+                padding-right: 10px;
+                &--purple{
+                    color: $color-primary;
+                }
+            }
+        }
+            
+    }
+
+
+    /*  ===========================================
+        =========== SECTION RESTAURANTS ===========
+        ===========================================  */ 
+
+    .restaurants{
+        background-color: #F2F2F2;
+        .cards{
+            width: 90%;
+            border-radius: 1em;
+            object-fit: cover;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-bottom: 5em;
+            grid-gap: 47px;
+            @media screen and (min-width: 768px){
+                width: 70%;
+            }
+            >h2{
+                padding: 2em 0 0;
+                width: 100%;
+                margin-bottom: 0;
+            }
+        }
+    }
+    .card{
+        background-color: white;
+        box-shadow: 0 0 20px #0000002e;
+        border-radius: 1em;
+        text-decoration: none;
+        color: inherit;
+        position: relative;
+        line-height: 6px;
+        max-width: 500px;
+        @media screen and (min-width: 768px){
+            min-width: 500px;
+            max-width: none;
+        }
+        &__img{
+            height: 12em;
+            width: 100%;
+            border: transparent solid 0px;
+            border-radius: 1rem 1rem 0 0;
+            box-shadow: none;
+            object-fit: cover;
+        }
+        &__new{
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            border-radius: 2px;
+            background-color: $color-tertiary;
+            color: #16912a;
+            padding: 0.7em;
+            font-weight: 700;
+        }
+        &__total{
+            padding: 0 1em 1em;
+        }
+            /* Btn heart - voir boutons en bas de page css */
+        &__btn{
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            bottom: 24px;
+        }
+    }
+ 
+    /*  ===========================================
+        ================ FOOTER ===================
+        ===========================================  
+        ALL PAGES */ 
+
+    .footer{
+        background-color: rgb(54, 54, 54);
+        color: white;
+        padding-bottom: 1em;
+        margin-top: -50px;
+        &__logo{
+            color: white;
+            font-family: "Shrikhand", "cursive";
+            padding: 1em 2em 0;
+            font-size: 1.2em;
+        }
+        &__link{
+            text-decoration: none;
+            color: white;
+        }
+        &__listli{
+            list-style: none;
+            line-height: 28px;
+        }
+        &__icone{
+            padding: 0 1em 0 0;
+            width: 1.3em;
+        }
+    }   
+    /*  ================================================================================
+        ============================== AUTRES PAGES ====================================
+        ================================================================================ */ 
+
+    .menu-photo
+    {
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        height: 320px;
+    }
+    .menu h2{
+        font-family: "Shrikhand", "cursive";
+    }
+    .submenu h3{
+        margin: 0;
+        text-transform: uppercase;
+        border-bottom: solid $color-tertiary; 
+        width: 2.5em;   
+        padding-bottom: 3px;
+    }
+
+    /*  ===========================================
+        ================ MENUS ===================
+        ===========================================  
+        ALL PAGES */ 
+        
+    .menu-container 
+    {
+        width: 100%;
+        margin: auto;
+        padding-top: 1em;
+        background-color: #F2F2F2;
+        border-radius: 35px 35px 0 0;
+        position: relative;
+        top: -50px;
+
+        @media screen and (min-width: 768px){
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 1em;
+        width: 95%;
+        }
+    .menu{
+        width: 90%;
+        margin: auto;
+            display: flex;
+            &__title{
+                flex: 1;
+                margin: 0;
+            }
+
+        }
+    }
+    .submenu{
+        width: 90%;
+        margin: auto;
+        row-gap: 1em;
+        margin-top: 2em;
+    
+        &__card {
+            background-color: white;
+            box-shadow: 0 0 10px #0000002e;
+            border-radius: 1em;
+            padding: 1em;
+            margin: 1em 0;
+            line-height: 23px;
+            cursor: pointer; 
+            overflow: hidden; /* cache ce qui dépasse */
+            display: flex;
+            animation: appear 0.5s;
+            animation-fill-mode: both;
+            &__title{
+                font-weight: bold;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                margin: 0;
+            }
+            &__part{
+                flex: 1;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            &__desc{
+                text-overflow: ellipsis;
+                overflow: hidden;
+                margin: 0; /* empêche la box flex de s'agrandir sur la hauteur quand le prix va à gauche */
+            }
+            &__price{
+                display: flex;
+                justify-content: flex-end;
+                padding-left: 10px;
+                align-items: flex-end;
+                font-weight: bolder;
+            }
+            &__confirmation{
+                    /* animation clic choix */
+                    width: 4em;
+                    margin: -1em -5em -1em 1em;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: $color-tertiary;
+                    transform: translateX(10px);  
+                    transition-duration: 0.5s;
+                    cursor: pointer;
+            }
+            &__icon{
+                    color: #99e2d0;
+                }
+            &__aroundIcon{
+                    width: 2em;
+                    height: 2em;
+                    background-color:white;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transform: rotate(180deg);
+                    transition-duration: 0.5s;
+                }
+            &:hover &__confirmation{
+                margin-right: -0.5em;
+                animation: rest 0.5s;
+                animation-fill-mode: forwards;
+            }
+            &:hover &__aroundIcon{
+                transform: rotate(0);
+            }
+                
+        }
+    }
+    
+
+    @media screen and (min-width: 768px){
+        .submenu1,.submenu2,.submenu3{
+            width: 30%;
+        }
+        .card1,.card2,.card3,.card4{
+            width: 48%;
+        }
+    }
+    /* Keyframes défilement du menu */
+    @keyframes appear {  /* changement de taille à l'apparition durant l'animation */
+        0% {
+            transform: /* translate(1px, 50px)*/ scale(0);
+        } 
+        100% {
+          transform: scale(1);
+        }
+      }
+    /* éléments apparaissent au fur et à mesure */
+    .delay-1{
+        animation-delay: 0.1s;
+    }
+    .delay-2{
+        animation-delay: 0.2s;
+    }
+    .delay-3{
+        animation-delay: 0.3s;
+    }
+    .delay-4{
+        animation-delay: 0.4s;
+    }
+    .delay-5{
+        animation-delay: 0.5s;
+    }
+    .delay-6{
+        animation-delay: 0.6s;
+    }
+    .delay-7{
+        animation-delay: 0.7s;
+    }
+    .delay-8{
+        animation-delay: 0.8s;
+    }
+    .delay-9{
+        animation-delay: 0.9s;
+    }
+    @for $i from 0 to 9 {
+        .delay-#{$i} {
+          animation-delay:  #{$i/10}s;
+        }
+      } 
+     /*  ===========================================
+         =============== BUTTONS ===================
+         ===========================================  
+        ALL PAGES */ 
+
+    .btn{    /* design du bouton */
+        color: white;
+        background-image: linear-gradient(-9deg,$color-primary,$color-secondary);
+        font-weight: bolder;
+        font-size: 1.1rem;
+        border-radius: 100px;
+        padding: 0.7em 1em;
+        border: none;
+        box-shadow: 2px 7px 9px #0000002e;
+        cursor: pointer;
+        &:hover{
+                opacity: 0.8;
+                box-shadow: 7px 8px 10px #0000002e;
+        }
+    }
+    .menu__btn{   /* position du bouton en bas de page */
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        padding: 4em;    
+    }
+    
+    .menu__like:hover{
+        font-weight: bold;
+        transition: 1s ease-in-out;
+        -webkit-transition: opacity 0.5 ease-in-out;
+        -moz-transition: visibility;
+        background: linear-gradient($color-primary, $color-secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        cursor: pointer;
+    }
+
+
+

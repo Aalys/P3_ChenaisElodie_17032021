@@ -36,7 +36,6 @@ $color-tertiary: #99E2D0;
                 border-top: 1em solid $color-tertiary;
                 border-right: 1em solid $color-secondary;
                 border-bottom: 1em solid $color-primary;
-                border-left: 1em solid linear-gradient($color-primary, $color-secondary, $color-tertiary );
                 animation: spinner 1.3s linear;
             }
         }
@@ -59,7 +58,6 @@ $color-tertiary: #99E2D0;
                 border-top: 1em solid $color-primary;
                 border-right: 1em solid $color-tertiary;
                 border-bottom: 1em solid $color-secondary;
-                border-left: 1em solid linear-gradient($color-primary, $color-secondary, $color-tertiary );
             }
             100%{
                 transform: rotate(360deg);

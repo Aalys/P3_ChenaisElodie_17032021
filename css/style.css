@@ -31,7 +31,6 @@ h2 {
   border-top: 1em solid #99E2D0;
   border-right: 1em solid #FF79DA;
   border-bottom: 1em solid #9356DC;
-  border-left: 1em solid linear-gradient(#9356DC, #FF79DA, #99E2D0);
   animation: spinner 1.3s linear;
 }
 
@@ -53,7 +52,6 @@ h2 {
     border-top: 1em solid #9356DC;
     border-right: 1em solid #99E2D0;
     border-bottom: 1em solid #FF79DA;
-    border-left: 1em solid linear-gradient(#9356DC, #FF79DA, #99E2D0);
   }
   100% {
     transform: rotate(360deg);

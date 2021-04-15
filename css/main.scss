@@ -357,8 +357,7 @@ $color-tertiary: #99E2D0;
             cursor: pointer; 
             overflow: hidden; /* cache ce qui dépasse */
             display: flex;
-            animation: appear 0.5s;
-            animation-fill-mode: both;
+            animation: appear 0.7s backwards ease-in-out;
             &__title{
                 font-weight: bold;
                 white-space: nowrap;
@@ -466,9 +465,9 @@ $color-tertiary: #99E2D0;
     .delay-9{
         animation-delay: 0.9s;
     }
-    @for $i from 0 to 9 {
+    @for $i from 0 through 9 {   /* boucle - arriver progressivement */
         .delay-#{$i} {
-          animation-delay:  #{$i/10}s;
+          animation-delay:  #{$i/6}s;
         }
       } 
      /*  ===========================================

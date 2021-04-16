@@ -40,6 +40,7 @@ h2 {
     background-color: white;
   }
   100% {
+    /* disappear */
     opacity: 0;
     z-index: -10;
   }
@@ -118,21 +119,17 @@ h2 {
   margin: auto;
   margin-bottom: 3em;
 }
-@media screen and (min-width: 768px) {
-  .fonct {
-    width: 75%;
-  }
-}
-.fonct .fonct-list {
+
+.fonct-list {
   display: flex;
-  position: relative;
 }
-@media screen and (max-width: 576px) {
-  .fonct .fonct-list {
+@media screen and (max-width: 1111px) {
+  .fonct-list {
     flex-wrap: wrap;
   }
 }
-.fonct .fonct-list__text {
+.fonct-list__text {
+  position: relative;
   width: 100%;
   margin: 0.5em;
   border-radius: 1.3em;
@@ -140,10 +137,20 @@ h2 {
   padding: 1.5em;
   background-color: #F2F2F2;
 }
-.fonct .fonct-list__text--purple {
+.fonct-list__text--purple {
   background-color: #9557e02f;
 }
-.fonct .fonct-list__num {
+@media screen and (max-width: 1111px) {
+  .fonct-list__text {
+    max-width: 80%;
+  }
+}
+@media screen and (min-width: 1111px) {
+  .fonct-list__text {
+    margin-right: 40px;
+  }
+}
+.fonct-list__num {
   border-radius: 100%;
   background-color: #9356DC;
   color: white;
@@ -156,24 +163,17 @@ h2 {
   align-items: center;
   margin-right: 1em;
   position: absolute;
-  left: -2px;
+  left: -8px;
 }
-@media screen and (min-width: 576px) {
-  .fonct .fonct-list__num {
-    position: relative;
-    left: -33px;
-    float: left;
-  }
-}
-.fonct .fonct-list__desc {
+.fonct-list__desc {
   align-items: center;
   font-weight: 600;
 }
-.fonct .fonct-list__icone {
+.fonct-list__icone {
   color: gray;
   padding-right: 10px;
 }
-.fonct .fonct-list__icone--purple {
+.fonct-list__icone--purple {
   color: #9356DC;
 }
 
@@ -192,17 +192,17 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 5em;
-  grid-gap: 47px;
-}
-@media screen and (min-width: 768px) {
-  .restaurants .cards {
-    width: 70%;
-  }
+  grid-gap: 20px;
 }
 .restaurants .cards > h2 {
   padding: 2em 0 0;
   width: 100%;
   margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .restaurants .cards > h2 {
+    padding: 2em 1em 0;
+  }
 }
 
 .card {
@@ -218,7 +218,6 @@ h2 {
 }
 @media screen and (min-width: 768px) {
   .card {
-    min-width: 500px;
     max-width: none;
   }
 }
@@ -318,7 +317,6 @@ h2 {
   .menu-container {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 1em;
     width: 95%;
   }
 }
@@ -420,6 +418,11 @@ h2 {
     width: 48%;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1325px) {
+  .submenu1, .submenu2, .submenu3 {
+    width: 45%;
+  }
+}
 /* Keyframes défilement du menu */
 @keyframes appear {
   /* changement de taille à l'apparition durant l'animation */
@@ -467,54 +470,54 @@ h2 {
   animation-delay: 0.9s;
 }
 
-/* boucle - arriver progressivement */
+/* boucle - arriver plus progressivement */
 .delay-0 {
   animation-delay: 0s;
 }
 
-/* boucle - arriver progressivement */
+/* boucle - arriver plus progressivement */
 .delay-1 {
-  animation-delay: 0.1666666667s;
+  animation-delay: 0.2s;
 }
 
-/* boucle - arriver progressivement */
+/* boucle - arriver plus progressivement */
 .delay-2 {
-  animation-delay: 0.3333333333s;
+  animation-delay: 0.4s;
 }
 
-/* boucle - arriver progressivement */
+/* boucle - arriver plus progressivement */
 .delay-3 {
-  animation-delay: 0.5s;
+  animation-delay: 0.6s;
 }
 
-/* boucle - arriver progressivement */
+/* boucle - arriver plus progressivement */
 .delay-4 {
-  animation-delay: 0.6666666667s;
+  animation-delay: 0.8s;
 }
 
-/* boucle - arriver progressivement */
+/* boucle - arriver plus progressivement */
 .delay-5 {
-  animation-delay: 0.8333333333s;
-}
-
-/* boucle - arriver progressivement */
-.delay-6 {
   animation-delay: 1s;
 }
 
-/* boucle - arriver progressivement */
+/* boucle - arriver plus progressivement */
+.delay-6 {
+  animation-delay: 1.2s;
+}
+
+/* boucle - arriver plus progressivement */
 .delay-7 {
-  animation-delay: 1.1666666667s;
+  animation-delay: 1.4s;
 }
 
-/* boucle - arriver progressivement */
+/* boucle - arriver plus progressivement */
 .delay-8 {
-  animation-delay: 1.3333333333s;
+  animation-delay: 1.6s;
 }
 
-/* boucle - arriver progressivement */
+/* boucle - arriver plus progressivement */
 .delay-9 {
-  animation-delay: 1.5s;
+  animation-delay: 1.8s;
 }
 
 /*  ===========================================
@@ -530,12 +533,12 @@ h2 {
   border-radius: 100px;
   padding: 0.7em 1em;
   border: none;
-  box-shadow: 2px 7px 9px #0000002e;
+  box-shadow: 2px 7px 9px #00000065;
   cursor: pointer;
 }
 .btn:hover {
   opacity: 0.8;
-  box-shadow: 7px 8px 10px #0000002e;
+  box-shadow: 5px 8px 10px #000000c7;
 }
 
 .menu__btn {
@@ -544,6 +547,11 @@ h2 {
   margin: auto;
   justify-content: center;
   padding: 4em;
+}
+@media screen and (min-width: 768px) and (max-width: 1325px) {
+  .menu__btn {
+    padding: 11em 12em;
+  }
 }
 
 .menu__like:hover {

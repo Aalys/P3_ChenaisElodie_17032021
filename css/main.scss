@@ -43,11 +43,11 @@ $color-tertiary: #99E2D0;
         @keyframes back-spinner{
             0% {
                 opacity: 0.9;
-                background-color: hsla(0,0%,100%);
+                background-color: white; 
             }
-            100% {
+            100% { /* disappear */
                 opacity: 0;
-                z-index: -10;
+                z-index: -10; 
             }
         }
         @keyframes spinner{
@@ -128,64 +128,62 @@ $color-tertiary: #99E2D0;
         width: 90%;
         margin: auto;
         margin-bottom: 3em;
-
-        @media screen and (min-width: 768px){
-            width: 75%;
-        }
-        .fonct-list{
-            display: flex;
-            position: relative;
-
-            @media screen and (max-width:576px)
-             {
-                flex-wrap: wrap;
-            }
-            &__text{
-                width: 100%;
-                margin: 0.5em;
-                border-radius: 1.3em;
-                box-shadow: 1px 7px 9px #0000002e;
-                padding: 1.5em;
-                background-color: #F2F2F2;
-                &--purple{
-                    background-color: #9557e02f;
-                }
-            }           
-            &__num{
-                border-radius: 100%;
-                background-color: $color-primary;
-                color: white;
-                height: 1em;
-                width: 1em;
-                min-height: 1.3em;
-                min-width: 1.3em;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-right: 1em;
-                position: absolute;
-                left: -2px;
-                
-                @media screen and (min-width: 576px){
-                    position: relative;
-                    left: -33px;
-                    float: left;
-                }
-            }
-            &__desc{
-                align-items: center;
-                font-weight: 600;
-            }
-            &__icone{
-                color: gray;
-                padding-right: 10px;
-                &--purple{
-                    color: $color-primary;
-                }
-            }
-        }
-            
+        
     }
+    .fonct-list{
+        display: flex;
+        
+        @media screen and (max-width:1111px)
+        {
+            flex-wrap: wrap;
+        }
+        &__text{
+            position: relative;
+            width: 100%;
+            margin: 0.5em;
+            border-radius: 1.3em;
+            box-shadow: 1px 7px 9px #0000002e;
+            padding: 1.5em;
+            background-color: #F2F2F2;
+            &--purple{
+                background-color: #9557e02f;
+            }
+            @media screen and (max-width:1111px){
+                max-width: 80%;
+                }
+            @media screen and (min-width:1111px){
+                margin-right: 40px;
+            }
+        }           
+        &__num{
+            border-radius: 100%;
+            background-color: $color-primary;
+            color: white;
+            height: 1em;
+            width: 1em;
+            min-height: 1.3em;
+            min-width: 1.3em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1em;
+            position: absolute;
+            left: -8px;
+
+        }
+        &__desc{
+            align-items: center;
+            font-weight: 600;
+        }
+        &__icone{
+            color: gray;
+            padding-right: 10px;
+            &--purple{
+                color: $color-primary;
+            }
+        }
+    }
+            
 
 
     /*  ===========================================
@@ -203,14 +201,14 @@ $color-tertiary: #99E2D0;
             flex-wrap: wrap;
             justify-content: center;
             padding-bottom: 5em;
-            grid-gap: 47px;
-            @media screen and (min-width: 768px){
-                width: 70%;
-            }
+            grid-gap: 20px;
             >h2{
                 padding: 2em 0 0;
                 width: 100%;
                 margin-bottom: 0;
+                @media screen and (min-width: 768px){
+                    padding: 2em 1em 0;
+                }
             }
         }
     }
@@ -223,8 +221,8 @@ $color-tertiary: #99E2D0;
         position: relative;
         line-height: 6px;
         max-width: 500px;
+        
         @media screen and (min-width: 768px){
-            min-width: 500px;
             max-width: none;
         }
         &__img{
@@ -326,7 +324,6 @@ $color-tertiary: #99E2D0;
         @media screen and (min-width: 768px){
         display: flex;
         flex-wrap: wrap;
-        column-gap: 1em;
         width: 95%;
         }
     .menu{
@@ -338,7 +335,6 @@ $color-tertiary: #99E2D0;
                 margin: 0;
                 font-family: 'Shrikhand', cursive;
             }
-
         }
     }
     .submenu{
@@ -428,10 +424,15 @@ $color-tertiary: #99E2D0;
             width: 48%;
         }
     }
+    @media screen and (min-width: 768px) and (max-width: 1325px){
+        .submenu1,.submenu2,.submenu3{
+            width: 45%;
+        }
+    }
     /* Keyframes défilement du menu */
     @keyframes appear {  /* changement de taille à l'apparition durant l'animation */
         0% {
-            transform: /* translate(1px, 50px)*/ scale(0);
+            transform:  /* translate(1px, 50px) */ scale(0);
         } 
         100% {
           transform: scale(1);
@@ -465,9 +466,9 @@ $color-tertiary: #99E2D0;
     .delay-9{
         animation-delay: 0.9s;
     }
-    @for $i from 0 through 9 {   /* boucle - arriver progressivement */
+    @for $i from 0 through 9 {   /* boucle - arriver plus progressivement */
         .delay-#{$i} {
-          animation-delay:  #{$i/6}s;
+          animation-delay:  #{$i*0.2}s;
         }
       } 
      /*  ===========================================
@@ -483,11 +484,11 @@ $color-tertiary: #99E2D0;
         border-radius: 100px;
         padding: 0.7em 1em;
         border: none;
-        box-shadow: 2px 7px 9px #0000002e;
+        box-shadow: 2px 7px 9px #00000065;
         cursor: pointer;
         &:hover{
                 opacity: 0.8;
-                box-shadow: 7px 8px 10px #0000002e;
+                box-shadow: 5px 8px 10px #000000c7;
         }
     }
     .menu__btn{   /* position du bouton en bas de page */
@@ -495,6 +496,9 @@ $color-tertiary: #99E2D0;
         margin: auto;
         justify-content: center;
         padding: 4em;    
+        @media screen and (min-width: 768px) and (max-width: 1325px){
+            padding: 11em 12em;
+        }
     }
     
     .menu__like:hover{
@@ -508,6 +512,5 @@ $color-tertiary: #99E2D0;
         color: transparent;
         cursor: pointer;
     }
-
 
 
